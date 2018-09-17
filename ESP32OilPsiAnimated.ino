@@ -251,11 +251,11 @@ void loop() {
   
   
   //select the right xbm for the number
-  if ((oilpsi < 18) && (isInverted == false)) {
+  if ((oilpsi < 15) && (isInverted == false)) {
     display.invertDisplay();
     isInverted = true;
   }
-  if ((oilpsi >= 18) && (isInverted == true)) {
+  if ((oilpsi >= 15) && (isInverted == true)) {
     display.normalDisplay();
     isInverted = false;
   }
@@ -325,7 +325,7 @@ void loop() {
       display.drawXbm(0, 0, gauge0_width, gauge0_height, gauge20_bits);
       break;
     default:
-      display.drawXbm(0, 0, gauge0_width, gauge0_height, gauge0_bits);
+      display.drawXbm(0, 0, gauge0_width, gauge0_height, gauge20_bits);
   }
   display.display();
   delay(20);
